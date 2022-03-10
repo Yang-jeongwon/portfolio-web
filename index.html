@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="scss/index.css">
+</head>
+<body>
+  <section id="main-stage1">
+    <nav>
+      <ul>
+        <li id="logo">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </nav>
+    <div>
+      <div id="icon" class="top"></div>
+      <div id="icon" class="jug"></div>
+      <div id="icon" class="mid"></div>
+      <div id="icon" class="ad"></div>
+      <div id="icon" class="sup"></div>
+    </div>
+    <div id="container">
+      <ul>
+        <li class="gamercard"></li>
+        <li class="gamercard"></li>
+        <li class="gamercard"></li>
+        <li class="gamercard"></li>
+        <li class="gamercard"></li>
+      </ul>
+      <ul>
+        <li class="gamercard"></li>
+        <li class="gamercard"></li>
+        <li class="gamercard"></li>
+        <li class="gamercard"></li>
+        <li class="gamercard"></li>
+      </ul>
+      <div class="arrow"><img src="./image/leftarrow.png"></div>
+    </div>
+  </section>
+  <section id="main-stage2">
+    <div id="slide-conatiner">
+      <div id="slide-prev"></div>
+      <div id="contents">
+        <ul>
+          <li>
+            <div class="time-text">
+              <h2>17:00</h2>
+              <h3>경기예정</h3>
+            </div>
+            <div class="team-logo">
+              <img src="./image/freditlogo.png">
+              <img src="./image/vs.png">
+              <img src="image/liivlogo.png">
+            </div>
+          </li>
+          <li>
+            <div class="time-text">
+              <h2>1</h2>
+              <h3>2</h3>
+            </div>
+            <div class="team-logo">
+              <img src="">
+              <img src="">
+              <img src="">
+            </div>
+          </li>
+          <li>
+            <div class="time-text">
+              <h2>1</h2>
+              <h3>2</h3>
+            </div>
+            <div class="team-logo">
+              <img src="">
+              <img src="">
+              <img src="">
+            </div>
+          </li>
+          <li>
+            <div class="time-text">
+              <h2>1</h2>
+              <h3>2</h3>
+            </div>
+            <div class="team-logo">
+              <img src="">
+              <img src="">
+              <img src="">
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="slide-next"></div>
+    </div>
+    <div id="banner"></div>
+    <div id="sitename">
+      <h2>생방송 챙겨보기</h2>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </section>
+  <section id="main-stage3">
+    <div id="column-container">
+      <h2>전문가 칼럼</h2>
+      <div id="column">
+        <ul>
+          <li>
+            <img>
+            <p>1</p>
+          </li>
+          <li>
+            <img>
+            <p>2</p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <img>
+            <p>3</p>
+          </li>
+          <li>
+            <img>
+            <p>4</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="news-container">
+      <h2>관련 뉴스</h2>
+      <h3><2022-02-22></h3>
+      <div id="news">
+        <ul>
+          <li>
+            <img>
+            <div id="text">
+              <h4>1</h4>
+              <p>2</p>
+            </div>
+          </li>
+          <li>
+            <img>
+            <div id="text">
+              <h4>1</h4>
+              <p>2</p>
+            </div>
+          </li>
+          <li>
+            <img>
+            <div id="text">
+              <h4>1</h4>
+              <p>2</p>
+            </div>
+          </li>
+          <li>
+            <img>
+            <div id="text">
+              <h4>1</h4>
+              <p>2</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <script>
+
+    const mainContainer = document.querySelector('#conatiner');
+    const icon = document.querySelectorAll('#icon');
+    // const top = document.querySelector('.top');
+    const jug = document.querySelector('.jug');
+    const mid = document.querySelector('.mid');
+    const ad = document.querySelector('.ad');
+    const sup = document.querySelector('.sup');
+    const arrow = document.querySelector('.arrow'); 
+    
+    let opacityValue = 0;
+    
+    console.dir(mainContainer);
+      
+    for(let i =0; i< mainContainer.length; i++) {
+      mainContainer.style.opacityValue = opacityValue;
+    };
+
+    arrow.addEventListener('click', function() {
+      for(let order = 0; order < moreContainer.length; order++) {
+        let fadeIn = setInterval(function() {
+          if(opacityValue < 1) {
+            opacityValue = opacityValue + 0.1;
+            mainContainer[order].style.opacity = opacityValue;
+          }
+        })
+      }
+    });
+  </script>
+</body>
+</html>

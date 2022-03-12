@@ -170,33 +170,44 @@
   </section>
   <script>
 
-    const mainContainer = document.querySelector('#conatiner');
-    const icon = document.querySelectorAll('#icon');
-    // const top = document.querySelector('.top');
-    const jug = document.querySelector('.jug');
-    const mid = document.querySelector('.mid');
-    const ad = document.querySelector('.ad');
-    const sup = document.querySelector('.sup');
+    const mainContainer = document.querySelector('#container');
     const arrow = document.querySelector('.arrow'); 
-    
-    let opacityValue = 0;
-    
-    console.dir(mainContainer);
-      
-    for(let i =0; i< mainContainer.length; i++) {
-      mainContainer.style.opacityValue = opacityValue;
-    };
 
+    console.dir(mainContainer);
+    
     arrow.addEventListener('click', function() {
-      for(let order = 0; order < moreContainer.length; order++) {
-        let fadeIn = setInterval(function() {
-          if(opacityValue < 1) {
-            opacityValue = opacityValue + 0.1;
-            mainContainer[order].style.opacity = opacityValue;
-          }
-        })
-      }
+        mainContainer.style.opacity = 0;
+        mainContainer.style.transition = .5 + 's';
     });
+
+    const topIcon = document.querySelector('.top');
+    const jugIcon = document.querySelector('.jug');
+    const midIocn = document.querySelector('.mid');
+    const adIcon = document.querySelector('.ad');
+    const supIcon = document.querySelector('.sup');
+
+    console.dir(supIcon);
+
+    top.addEventListener('click', function() {
+      // if (topIcon.classList.contains('start-show') === true) {
+      //   topIcon.classList.remove('state-show');
+      // } else {
+        //   topIcon.classList.add('state-show');
+        // }
+        topIcon.animate( {
+          trasform: [
+            'translateX(0px)',
+            'translateX(300px)'
+          ]
+        },
+        {
+          duration: 3000,
+          fill: 'forwards',
+          easing: 'ease'
+        }
+    });
+
+    
   </script>
 </body>
 </html>
